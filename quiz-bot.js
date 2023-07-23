@@ -1,41 +1,4 @@
-const quizData = [
-    {
-        difficult: "Сложность: легкая",
-        question: "Как посмотреть основное меню игрока?",
-        a: "/main",
-        b: "/menu_bar",
-        c: "/menu",
-        d: "/main_bar",
-        correct: "/menu"
-    },
-    {
-        difficult: "Сложность: легкая",
-        question: "Связь с администрацией",
-        a: "/adm",
-        b: "/report",
-        c: "/rpt",
-        d: "/admin",
-        correct: "/report"
-    },
-    {
-        difficult: "Сложность: легкая",
-        question: "Помощь и подсказки по игре",
-        a: "/hellp",
-        b: "/faq",
-        c: "/FAQ",
-        d: "/help",
-        correct: "/help"
-    },
-    {
-        difficult: "Сложность: средняя",
-        question: "Описание РП действий от 1-го лица",
-        a: "/do",
-        b: "/todo",
-        c: "/try",
-        d: "/me",
-        correct: "/me"
-    }
-]
+import { baseQuizData } from './base-quiz/base_quiz.js';
 
 const diff = document.getElementById('diff');
 const quiz = document.getElementById('question');
@@ -43,7 +6,7 @@ const a = document.getElementById('a_text');
 const b = document.getElementById('b_text');
 const c = document.getElementById('c_text');
 const d = document.getElementById('d_text');
-const form = document.getElementById('form');
+const form = document.getElementById('form-submit');
 const fildInput = document.getElementById('fild');
 const quizContainer = document.getElementById('quizContainer');
 
@@ -51,7 +14,8 @@ let currentQuiz = 0;
 let countTrueAns = 0;
 let countFalseAns = 0;
 
-form.addEventListener('submit', startQuiz);
+let quizData = []
+quizData = baseQuizData;
 
 function checkResult() {
     const percent = countTrueAns / (quizData.length / 100);     //жеские математические рассчёты
@@ -74,7 +38,10 @@ function quizUpdate () {
 }
 quizUpdate();
 
-function startQuiz (event) {
+form.addEventListener('submit', startEvent);
+
+
+function startEvent (event) {
     event.preventDefault();
 
     quizUpdate();
@@ -104,3 +71,4 @@ function startQuiz (event) {
 
     fildInput.value = "";
 }
+
