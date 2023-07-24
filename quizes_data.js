@@ -37,15 +37,6 @@ export const baseQuizData = [
     },
     {
         difficult: "Сложность: легкая",
-        question: "Помощь и подсказки по игре",
-        a: "/hellp",
-        b: "/faq",
-        c: "/FAQ",
-        d: "/help",
-        correct: "/help"
-    },
-    {
-        difficult: "Сложность: легкая",
         question: "Вопросы и ответы",
         a: "/hellp",
         b: "/faq",

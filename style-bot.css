@@ -10,7 +10,7 @@
 }
 
 body {
-	background-color: white;
+	background-color: rgb(141, 141, 141);
 }
 
 li {
@@ -38,14 +38,14 @@ button {
 	align-items: center;
 	transition: all 0.3s ease 0s;
 	padding: 0px 16px;
-	background-color: rgb(231, 231, 0);
+	background-color: rgb(168, 8, 249);
 	font-weight: 700;
 	font-size: 16px;
 	cursor: pointer;
 }
 
 button:hover {
-	background-color: rgb(248, 248, 89);
+	background-color: rgb(154, 124, 254);
 }
 
 button._active {
@@ -75,6 +75,8 @@ button._active {
 
 .menu {
 	display: inline-block;
+	position: relative;
+	z-index: 5;
 }
 
 .menu._active .menu__list {
@@ -96,18 +98,30 @@ button._active {
 }
 
 .menu__list {
-	background-color: #77608d;
+	background-color: #77608d97;
 	padding: 15px;
 }
 .menu__list li:not(:last-child) {
 	margin: 0px 0px 15px 0px;
 }
-.menu__link {
-	color: #fff;
+.menu__link__band {
+	color: #c4ce01;
 	font-size: 16px;
-}
-.menu__link:hover {
 	text-decoration: none;
+}
+.menu__link__band:hover {
+	color: #edf910;
+	font-size: 18px;
+}
+
+.menu__link__sys {
+	color: #cd0303;
+	font-size: 16px;
+	text-decoration: none;
+}
+.menu__link__sys:hover {
+	color: #f91010;
+	font-size: 18px;
 }
 
 .quiz-container {
@@ -147,10 +161,7 @@ button._active {
 .submit-button {
 	text-transform: uppercase;
 	font-weight: 600;
-	border-radius: 1em;
 	padding: 10px 10px;
-	background-color: transparent;
-	border: 2px solid #555555;
 	margin: 0 auto;
     display: block;
 }
@@ -159,7 +170,6 @@ button._active {
 	text-transform: uppercase;
 	color: white;
 	font-weight: 600;
-	border-radius: 1em;
 	padding: 10px 10px;
 	background-color: black;
 	border: 2px solid #555555;
@@ -171,6 +181,17 @@ button._active {
 	background-color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	transform: translateY(4px);
+}
+
+.question {
+	padding: 10px;
+	border: 2px solid;
+	color: white;
+	background-color: black;
+}
+
+.quiz-body .variant {
+	
 }
 
 .result {

@@ -10,18 +10,20 @@
     <body>
         <nav class="menu">
             <button type="button" class="menu__button">
-                <span>Open</span>
-                <span>Close</span>
+                <span>Открыть меню</span>
+                <span>Закрыть меню</span>
             </button>
             <ul hidden class="menu__list">
-                <li><a href="./band-quiz/band_quiz.html" class="menu__link">Band Quiz</a></li>
-                <li><a href="./sys-quiz/sys_quiz.html" class="menu__link">System Quiz</a></li>
+                <li><a href="./band-quiz/band_quiz.html" class="menu__link__band">Band Quiz</a></li>
+                <li><a href="./sys-quiz/sys_quiz.html" class="menu__link__sys">System Quiz</a></li>
             </ul>
         </nav>
         <div class="quiz-container" id="quizContainer">
             <div class="quiz-body">
                 <h4 id="diff">Сложность</h4>
-                <h3 id="question">Вопрос</h3><br>
+                <div class="question">
+                    <h3 id="question">Вопрос</h3><br>
+                </div>
                 <lable id="a_text" class="variant">Варинат</lable>
                 <br>
                 <lable id="b_text" class="variant">Варинат</lable>
@@ -31,7 +33,7 @@
                 <lable id="d_text" class="variant">Варинат</lable>
                 <form id="form-submit">
                     <input type="text" class="form-control" id="fild" placeholder="ВВЕДИТЕ ОТВЕТ" required><br>
-                    <button type="submit" class="submit-button">Тисни</button>
+                    <button type="submit" class="submit-button">Подтвердить</button>
                 </form>
             </div>
         </div>
