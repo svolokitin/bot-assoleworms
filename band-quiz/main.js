@@ -1,4 +1,4 @@
-import { baseQuizData } from './quizes_data.js';
+import { bandQuizData } from '../quizes_data.js';
 
 const diff = document.getElementById('diff');
 const quiz = document.getElementById('question');
@@ -9,14 +9,13 @@ const d = document.getElementById('d_text');
 const form = document.getElementById('form-submit');
 const fildInput = document.getElementById('fild');
 const quizContainer = document.getElementById('quizContainer');
-const menuBody = document.querySelector('.menu');
 
 let currentQuiz = 0;
 let countTrueAns = 0;
 let countFalseAns = 0;
 
 let quizData = []
-quizData = baseQuizData;
+quizData = bandQuizData;
 
 function checkResult() {
     const percent = countTrueAns / (quizData.length / 100);     //жеские математические рассчёты
@@ -38,18 +37,6 @@ function quizUpdate () {
     d.innerText = quizData[currentQuiz].d;
 }
 quizUpdate();
-
-document.addEventListener('click', menu);
-
-function menu(event) {
-    if (event.target.closest('.menu__button')) {
-        menuBody.classList.toggle('_active');
-    }
-    if (!event.target.closest('.menu')) {
-        menuBody.classList.remove('_active');
-    }
-}
-
 
 form.addEventListener('submit', startEvent);
 
@@ -84,4 +71,3 @@ function startEvent (event) {
 
     fildInput.value = "";
 }
-
