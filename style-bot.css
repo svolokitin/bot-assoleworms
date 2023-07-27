@@ -104,6 +104,18 @@ button._active {
 .menu__list li:not(:last-child) {
 	margin: 0px 0px 15px 0px;
 }
+
+.menu__link__base {
+	color: #0bce01;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.menu__link__base:hover {
+	color: #10f914;
+	font-size: 18px;
+}
+
 .menu__link__band {
 	color: #c4ce01;
 	font-size: 16px;

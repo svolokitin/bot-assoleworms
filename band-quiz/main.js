@@ -9,6 +9,7 @@ const d = document.getElementById('d_text');
 const form = document.getElementById('form-submit');
 const fildInput = document.getElementById('fild');
 const quizContainer = document.getElementById('quizContainer');
+const menuBody = document.querySelector('.menu');
 
 let currentQuiz = 0;
 let countTrueAns = 0;
@@ -37,6 +38,17 @@ function quizUpdate () {
     d.innerText = quizData[currentQuiz].d;
 }
 quizUpdate();
+
+document.addEventListener('click', menu);
+
+function menu(event) {
+    if (event.target.closest('.menu__button')) {
+        menuBody.classList.toggle('_active');
+    }
+    if (!event.target.closest('.menu')) {
+        menuBody.classList.remove('_active');
+    }
+}
 
 form.addEventListener('submit', startEvent);
 
