@@ -136,6 +136,18 @@ button._active {
 	font-size: 18px;
 }
 
+.menu__link__TF {
+	color: #5e5e5e;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.menu__link__TF:hover {
+	color: #878787;
+	font-size: 16px;
+	text-decoration: none;
+}
+
 .quiz-container {
 	--quiz-size: calc(var(--index) * 22);
     position: absolute;
